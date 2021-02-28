@@ -39,7 +39,7 @@ const Contact = () => {
             <p className="contact-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
-            <h2> E-mail me at <a href="petergbsmith@gmail.com">petergbsmith@gmail.com</a></h2>
+            <h2> E-mail me at <a href="mailto:petergbsmith@gmail.com">petergbsmith@gmail.com</a></h2>
             <Social />
         </div>
     </motion.section>
