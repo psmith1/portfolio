@@ -3,10 +3,10 @@ import { ReactComponent as Shapes } from '../images/shapes.svg';
 import { motion } from 'framer-motion';
 import Social from './Social';
 
-const variants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0 }
-}
+// const variants = {
+//     hidden: { opacity: 0, y: 100 },
+//     visible: { opacity: 1, y: 0 }
+// }
 const sectionVariants = {
     initial: {opacity: 0},
     enter: {opacity: 1},

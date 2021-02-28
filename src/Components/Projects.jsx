@@ -3,16 +3,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import projectData from '../data/projectdata';
 import { ReactComponent as Multiwave } from '../images/multiwave.svg';
-import { Icon, InlineIcon } from '@iconify/react';
-import bxLink from '@iconify-icons/bx/bx-link';
-import bxlGithub from '@iconify-icons/bx/bxl-github';
 import ProjectLink from './ProjectLink';
 import { motion } from 'framer-motion';
 
-const variants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0 }
-}
+// const variants = {
+//     hidden: { opacity: 0, y: 100 },
+//     visible: { opacity: 1, y: 0 }
+// }
 
 const sectionVariants = {
     initial: {opacity: 0},

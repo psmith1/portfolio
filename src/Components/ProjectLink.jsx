@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import bxLink from '@iconify-icons/bx/bx-link';
 import bxlGithub from '@iconify-icons/bx/bxl-github';
 

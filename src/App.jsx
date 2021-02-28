@@ -3,22 +3,22 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useLocation
+  Link
+  // useLocation
 } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Homepage from './Components/Homepage';
 import Projects from './Components/Projects';
 import Education from './Components/Education'
 import Stack from './Components/Stack';
 import Contact from './Components/Contact'
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import bxMenu from '@iconify-icons/bx/bx-menu';
 import { useState } from 'react';
 
 
 const AppRouter = () => {
-  let location = useLocation()
+  // let location = useLocation()
   return (
         <Route render={({location}) => (
           <AnimatePresence exitBeforeEnter initial={false}>
