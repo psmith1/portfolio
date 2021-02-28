@@ -13,16 +13,49 @@ $primary: #109A81;
   overflow-x: hidden;
   min-height: 100vh;
 }
+.navbar {
+  position: fixed;
+  z-index: 10;
+  padding-top: 60px;
+  padding-right: 80px;
+  right: 0px;
+  display: flex;
 
+}
 .main-nav {
   display: flex;
   color: $medText;
-  position: fixed;
-  z-index: 10;
-  right: 0px;
-  padding-top: 60px;
-  padding-right: 80px;
   align-items: center;
+  @media (max-width: 800px) {
+    display: none;
+    &.menu-open {
+      box-shadow: 0px 2px 50px 0px rgba(0,0,0,0.03);
+      position: fixed;
+      display: flex;
+      top: 0;
+      right: 0;
+      width: 80%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(14px);
+      flex-direction: column;
+      font-size: 24px;
+      padding-left: 0px;
+      align-items: flex-start;
+      padding: 40px;
+      padding-top: 150px;
+
+      a.home-logo {
+        padding: 10px;
+        margin-bottom: 50px;
+      }
+
+      a {
+        padding-bottom: 50px;
+        padding-left: 0;
+      }
+    }
+  }
 
   a {
     display: block;
@@ -36,6 +69,7 @@ $primary: #109A81;
     padding: 10px;
     border: 1px solid $primary;
     border-radius: 6px;
+
     &:hover {
       color: $darkText;
       border-color: $darkText;
@@ -45,7 +79,18 @@ $primary: #109A81;
     color: $primary;
   }
 }
-
+.menu-icon {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  @media (min-width: 800px) {
+    display: none;
+  }
+  svg {
+    width: 44px;
+    height: 44px;
+  }
+}
 
 
 .homepage {
@@ -106,6 +151,13 @@ $primary: #109A81;
 
 .icon:hover {
   color: $primary;
+}
+
+.hamburger-icon {
+  svg {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 .projects-wrapper {

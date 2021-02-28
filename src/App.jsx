@@ -12,6 +12,10 @@ import Projects from './Components/Projects';
 import Education from './Components/Education'
 import Stack from './Components/Stack';
 import Contact from './Components/Contact'
+import { Icon, InlineIcon } from '@iconify/react';
+import bxMenu from '@iconify-icons/bx/bx-menu';
+import { useState } from 'react';
+
 
 const AppRouter = () => {
   let location = useLocation()
@@ -32,16 +36,23 @@ const AppRouter = () => {
 
 function App() {
 
+const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <div className="App">
       <Router>
-        <nav className="main-nav">
-          <Link className="home-logo" to="/">Peter Smith</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/stack">Tech Stack</Link>
-          <Link to="/education">Education</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
+        <header className="navbar">
+          <nav className={`${openMenu ? 'menu-open' : 'menu-closed'} main-nav`}>
+            <Link onClick={() => setOpenMenu(false)} className="home-logo" to="/">Peter Smith</Link>
+            <Link onClick={() => setOpenMenu(false)} to="/projects">Projects</Link>
+            <Link onClick={() => setOpenMenu(false)} to="/stack">Tech Stack</Link>
+            <Link onClick={() => setOpenMenu(false)} to="/education">Education</Link>
+            <Link onClick={() => setOpenMenu(false)} to="/contact">Contact</Link>
+          </nav>
+          <button className="menu-icon" onClick={() => setOpenMenu(!openMenu)}>
+            <Icon icon={bxMenu} />
+          </button>
+        </header>
         <AppRouter />
       </Router>
     </div>
