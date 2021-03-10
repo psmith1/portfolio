@@ -339,6 +339,9 @@ $primary: #109a81;
   left: 0;
   width: 100%;
   height: 100%;
+  @media (max-width: 880px) {
+    display: none;
+  }
 }
 
 .education-info {
