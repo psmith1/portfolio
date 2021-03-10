@@ -33,14 +33,14 @@ const Projects = () => {
             </div>
                 <div className="projects-wrapper">
                     <Swiper
-                    spaceBetween={70}
-                    slidesPerView={1.2}
+                    spaceBetween={60}
+                    slidesPerView={1.5}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
                     breakpoints={{
                         640: {
                             width: 640,
-                            slidesPerView: 1.2,
+                            slidesPerView: 1.4,
                         },
                         1024: {
                             width: 1024,

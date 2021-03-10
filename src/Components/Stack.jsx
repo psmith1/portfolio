@@ -44,7 +44,7 @@ const Stack = () => {
                 Tech Stack
             </h1>
             <div className="stack-description">
-                As a designer and coder, I have experience with multiple front-end and back-end technologies,including React and Node.js. I also collaborate with a mind towards usability, employing semantic HTML and SCSS.
+                As a designer and coder, I have experience with multiple front-end and back-end technologies, including semantic HTML, React, and Node.js. I also value my collaborative tools including Git and Figma.
             </div>
             <div className="stack-lists">
                 { techStackData.map((data, i) => (
