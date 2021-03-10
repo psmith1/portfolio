@@ -9,7 +9,7 @@ const techStackData = [
     },
     {
         title: 'Design',
-        technologies: ['Figma','AdobeXD', 'InVision']
+        technologies: ['Figma','AdobeXD', 'Miro', 'InVision']
     }
 ]
 

@@ -29,7 +29,7 @@ const Homepage = () => {
         </div>
         <div className="bio">
           <h1 className="heading bio-heading">Hi, I'm Peter Smith</h1>
-          <p className="bio-text">I'm a full-stack web developer and UX/UI designer based out of Kansas City, MO. I can switch between front and back end development based on a wide range of requirements and time parameters. I'm currently open to freelancing and would love to help you get started on your next project.</p>
+          <p className="bio-text">I'm a web developer and UX/UI designer based out of Kansas City, MO, and I like to make cool things. I'm currently seeking to be part of professonal creative team.</p>
           <div className="social">
             <Social />
           </div>
