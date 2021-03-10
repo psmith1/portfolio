@@ -209,6 +209,9 @@ $primary: #109a81;
   background: rgba(255, 255, 255, 0.2);
   color: $medText;
   font-weight: 300;
+  @media (max-width: 880px) {
+    background: rgb(255, 255, 255);
+  }
 }
 
 .project-title {
@@ -227,6 +230,10 @@ $primary: #109a81;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
+
+  &:hover {
+    color: $darkText;
+  }
 
   svg {
     padding-right: 5px;
@@ -253,6 +260,9 @@ $primary: #109a81;
   left: 0;
   width: 100%;
   height: 100%;
+  @media (max-width: 880px) {
+    display: none;
+  }
 }
 
 .top-circle-wrapper {
