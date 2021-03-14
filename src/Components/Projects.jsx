@@ -2,11 +2,23 @@ import React from 'react';
 import projectData from '../data/projectdata';
 import { ReactComponent as Multiwave } from '../images/multiwave.svg';
 import ProjectLink from './ProjectLink';
+import { motion } from 'framer-motion';
 
-
+const sectionVariants = {
+    initial: {opacity: 0},
+    enter: {opacity: 1},
+    exit: {opacity: 0}
+}
 
 const Projects = () => {
     return (
+        <motion.section
+            className="projects"
+            variants={sectionVariants}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            transition={{duration: 0.3}}>
             <div className="projects-wrapper">
                 <div className="projects-background">
                     <div className="multiwave-wrapper">
@@ -30,6 +42,7 @@ const Projects = () => {
                     </div>
                 ))}
             </div>
+        </motion.section>
     )
 }
 
