@@ -30,7 +30,7 @@ const Homepage = () => {
         </div>
         <div className="bio">
           <ReactTypingEffect className="heading bio-heading typingeffect" text={['Hi, I\'m Peter Smith']} speed={90} eraseDelay={50000}/>
-          <p className="bio-text">I'm a web developer and UX/UI designer based out of Kansas City, MO, and I like to make cool things. I'm currently seeking to be part of professonal creative team.</p>
+          <p className="bio-text">I'm a web developer and UX/UI designer based out of Kansas City, MO, and I like to make cool things. I'm currently seeking to be part of professional creative team.</p>
           <div className="social">
             <Social />
           </div>

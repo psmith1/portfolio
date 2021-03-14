@@ -31,45 +31,44 @@ const Projects = () => {
                     <Multiwave />
                 </div>
             </div>
-                <div className="projects-wrapper">
-                    <Swiper
-                    spaceBetween={60}
-                    slidesPerView={1.5}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    breakpoints={{
-                        640: {
-                            width: 640,
-                            slidesPerView: 1.4,
-                        },
-                        1024: {
-                            width: 1024,
-                            slidesPerView: 2.2
-                        }
-                    }}
-                    >
-                    <div className="projects-wrapper">
-                    {projectData.map((data, i)=> (
-                        <SwiperSlide>
-                            <div className="card">
-                                <img src={`./images/${data.img}`} alt="" className="project-image"/>
-                                <div className="card-content">
-                                    <h2 className="project-title">
-                                        {data.title}
-                                    </h2>
-                                    <p className="project-description">
-                                        {data.description}
-                                    </p>
-                                    {data.demo ? <ProjectLink url={data.demo} icon='link' label='Demo' /> : null}
-                                    {data.link ? <ProjectLink url={data.link} icon='link' label='Link'/> : null}
-                                    {data.github ? <ProjectLink url={data.github} icon='github' label='GitHub' /> : null}
-                                </div>
+            <div className="projects-wrapper">
+                <Swiper
+                spaceBetween={15}
+                slidesPerView={1.2}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+                breakpoints={{
+                    640: {
+                        width: 640,
+                        slidesPerView: 1.2,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        width: 1024,
+                        slidesPerView: 2.2
+                    }
+                }}
+                >
+                {projectData.map((data, i)=> (
+                    <SwiperSlide>
+                        <div className="card">
+                            <img src={`./images/${data.img}`} alt="" className="project-image"/>
+                            <div className="card-content">
+                                <h2 className="project-title">
+                                    {data.title}
+                                </h2>
+                                <p className="project-description">
+                                    {data.description}
+                                </p>
+                                {data.demo ? <ProjectLink url={data.demo} icon='link' label='Demo' /> : null}
+                                {data.link ? <ProjectLink url={data.link} icon='link' label='Link'/> : null}
+                                {data.github ? <ProjectLink url={data.github} icon='github' label='GitHub' /> : null}
                             </div>
-                        </SwiperSlide>
-                    ))}
-                    </div>
-                    </Swiper>
-                </div>
+                        </div>
+                    </SwiperSlide>
+                ))}
+                </Swiper>
+            </div>
         </motion.section>
     )
 }
