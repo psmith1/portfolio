@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  NavLink
   // useLocation
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
@@ -43,11 +44,41 @@ const [openMenu, setOpenMenu] = useState(false);
       <Router>
         <header className="navbar">
           <nav className={`${openMenu ? 'menu-open' : 'menu-closed'} main-nav`}>
-            <Link onClick={() => setOpenMenu(false)} className="home-logo" to="/">Peter Smith</Link>
-            <Link onClick={() => setOpenMenu(false)} to="/projects">Projects</Link>
-            <Link onClick={() => setOpenMenu(false)} to="/stack">Tech Stack</Link>
-            <Link onClick={() => setOpenMenu(false)} to="/education">Education</Link>
-            <Link onClick={() => setOpenMenu(false)} to="/contact">Contact</Link>
+            <NavLink
+              onClick={() => setOpenMenu(false)}
+              className="home-logo"
+              to="/"
+            >
+              Peter Smith
+            </NavLink>
+            <NavLink
+              onClick={() => setOpenMenu(false)}
+              to="/projects"
+              activeStyle={{fontWeight: "bold", color: "#109a81"}}
+            >
+              Projects
+            </NavLink>
+            <NavLink
+              onClick={() => setOpenMenu(false)}
+              to="/stack"
+              activeStyle={{fontWeight: "bold", color: "#109a81"}}
+            >
+              Tech Stack
+            </NavLink>
+            <NavLink
+              onClick={() => setOpenMenu(false)}
+              to="/education"
+              activeStyle={{fontWeight: "bold", color: "#109a81"}}
+            >
+              Education
+            </NavLink>
+            <NavLink
+              onClick={() => setOpenMenu(false)}
+              to="/contact"
+              activeStyle={{fontWeight: "bold", color: "#109a81"}}
+            >
+              Contact
+            </NavLink>
           </nav>
           <button className="menu-icon" onClick={() => setOpenMenu(!openMenu)}>
             <Icon icon={bxMenu} />
