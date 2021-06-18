@@ -1,10 +1,10 @@
 const projectData = [
     {
-        title: 'GoldenHour',
-        img: 'goldenhourimg.png',
-        description: 'GoldenHour is a tool for photographers that utilizes Moment.js, HTML, CSS, JavaScript, and the Imgur API.',
-        link: 'https://burragedanielle.github.io/project_one/',
-        github: 'https://github.com/psmith1/project_one'
+        title: 'Too Many Murrays',
+        img: 'TooManyMurrays.png',
+        description: 'Too Many Murrays is a take on the Memory game that utilizes React.js to display and shuffle images.',
+        link: 'https://toomanymurrays.netlify.app/',
+        github: 'https://github.com/psmith1/react-memory-game'
     },
     {
         title: 'LIRI',
