@@ -37,6 +37,7 @@ const Projects = () => {
                             {data.demo ? <ProjectLink url={data.demo} icon='link' label='Demo' /> : null}
                             {data.link ? <ProjectLink url={data.link} icon='link' label='Link'/> : null}
                             {data.github ? <ProjectLink url={data.github} icon='github' label='GitHub' /> : null}
+                            {data.prototype ? <ProjectLink url={data.prototype} icon='link' label='Prototype' /> : null}
                         </div>
                         <img src={`./images/${data.img}`} alt="" className="project-image"/>
                     </div>

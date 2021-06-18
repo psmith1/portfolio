@@ -1,5 +1,12 @@
 const projectData = [
     {
+        title: 'SafeTravels - A UX/UI Case Study',
+        img: 'SafeTravels.png',
+        description: 'Design Brief: "Imagine you’ve just been hired as a product designer for a new travel startup. The startup plans to launch the app once the global Pandemic ends. The startup’s goal is to build a modern-day mobile app that helps people plan their next trip, post-Pandemic."',
+        link: 'https://uxfol.io/project/035a6b0a/SafeTravels--COVID-friendly-travel-app-UX-UI-case-study',
+        prototype: 'https://www.figma.com/proto/5MniMe4IqxhHZPBLUE1a4y/SafeTravels-iOS-Wireframes?node-id=20%3A28160&scaling=scale-down&page-id=0%3A1'
+    },
+    {
         title: 'Too Many Murrays',
         img: 'TooManyMurrays.png',
         description: 'Too Many Murrays is a take on the Memory game that utilizes React.js to display and shuffle images.',
