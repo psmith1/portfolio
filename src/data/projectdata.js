@@ -1,8 +1,15 @@
 const projectData = [
+        {
+        title: 'Gardenia - A UX/UI Case Study',
+        img: 'Gardenia.png',
+        description: 'My second UX/UI case study completed for a bootcamp class project. An app that provides diagnosing, tips, and a collection place to store users’ plants.',
+        link: 'https://uxfol.io/project/035fe478/Gardenia--A-UX-UI-case-study',
+        prototype: 'https://www.figma.com/proto/X8H4Z6vWSzlymf9nroTINr/Gardenia-Prototype?node-id=1%3A236&scaling=scale-down&page-id=0%3A1'
+    },
     {
         title: 'SafeTravels - A UX/UI Case Study',
         img: 'SafeTravels.png',
-        description: 'Design Brief: "Imagine you’ve just been hired as a product designer for a new travel startup. The startup plans to launch the app once the global Pandemic ends. The startup’s goal is to build a modern-day mobile app that helps people plan their next trip, post-Pandemic."',
+        description: 'My first UX/UI case study. Design Brief: "Imagine you’ve just been hired as a product designer for a new travel startup. The startup plans to launch the app once the global Pandemic ends. The startup’s goal is to build a modern-day mobile app that helps people plan their next trip, post-Pandemic."',
         link: 'https://uxfol.io/project/035a6b0a/SafeTravels--COVID-friendly-travel-app-UX-UI-case-study',
         prototype: 'https://www.figma.com/proto/5MniMe4IqxhHZPBLUE1a4y/SafeTravels-iOS-Wireframes?node-id=20%3A28160&scaling=scale-down&page-id=0%3A1'
     },
