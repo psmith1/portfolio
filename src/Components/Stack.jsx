@@ -7,6 +7,7 @@ import RouteChangeTracker from './RouteChangeTracker';
 
 const trackingId = "G-WK39HEGN9M";
 ReactGA.initialize(trackingId);
+ReactGA.pageview('/stack');
 
 const variants = {
     hidden: { opacity: 0, y: 100 },
