@@ -15,7 +15,12 @@ import Contact from './Components/Contact'
 import { Icon } from '@iconify/react';
 import bxMenu from '@iconify-icons/bx/bx-menu';
 import { useState } from 'react';
+import ReactGA from 'react-ga';
+import RouteChangeTracker from './Components/RouteChangeTracker';
 
+const trackingId = "G-WK39HEGN9M";
+ReactGA.initialize(trackingId);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const AppRouter = () => {
   // let location = useLocation()
@@ -28,6 +33,7 @@ const AppRouter = () => {
               <Route path="/stack" component={Stack} />
               <Route path="/projects" component={Projects}/>
               <Route path="/" component={Homepage} />
+              <RouteChangeTracker />
             </Switch>
           </AnimatePresence>
         )} />
