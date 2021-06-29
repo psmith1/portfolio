@@ -3,6 +3,11 @@ import { ReactComponent as Shapes } from '../images/shapes.svg';
 import { motion } from 'framer-motion';
 import Social from './Social';
 import ReactTypingEffect from 'react-typing-effect';
+import ReactGA from 'react-ga';
+import RouteChangeTracker from './RouteChangeTracker';
+
+const trackingId = "G-WK39HEGN9M";
+ReactGA.initialize(trackingId);
 
 // const variants = {
 //     hidden: { opacity: 0, y: 100 },
@@ -16,6 +21,7 @@ const sectionVariants = {
 
 const Homepage = () => {
     return (
+
     <motion.section
         className="homepage"
         variants={sectionVariants}
@@ -30,11 +36,12 @@ const Homepage = () => {
         </div>
         <div className="bio">
           <ReactTypingEffect className="heading bio-heading typingeffect" text={['Hi, I\'m Peter Smith']} speed={90} eraseDelay={50000}/>
-          <p className="bio-text">I'm a web developer and UX/UI designer based out of Kansas City, MO, and I like to make cool things. I'm currently seeking to be part of a professional creative team.</p>
+          <p className="bio-text">I'm UX/UI designer based out of Kansas City, MO, and I like to make cool things. I'm currently seeking to be part of a professional creative team.</p>
           <div className="social">
             <Social />
           </div>
         </div>
+      <RouteChangeTracker />
       </motion.section>
     )
 }

@@ -3,6 +3,11 @@ import projectData from '../data/projectdata';
 import { ReactComponent as Multiwave } from '../images/multiwave.svg';
 import ProjectLink from './ProjectLink';
 import { motion } from 'framer-motion';
+import ReactGA from 'react-ga';
+import RouteChangeTracker from './RouteChangeTracker';
+
+const trackingId = "G-WK39HEGN9M";
+ReactGA.initialize(trackingId);
 
 const sectionVariants = {
     initial: {opacity: 0},
@@ -43,6 +48,7 @@ const Projects = () => {
                     </div>
                 ))}
             </div>
+            <RouteChangeTracker />
         </motion.section>
     )
 }
