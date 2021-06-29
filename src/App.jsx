@@ -15,13 +15,14 @@ import Contact from './Components/Contact'
 import { Icon } from '@iconify/react';
 import bxMenu from '@iconify-icons/bx/bx-menu';
 import { useState, useEffect } from 'react';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 
 function usePageViews() {
   let location = useLocation();
   useEffect(() => {
-    ReactGA.send(["pageview", location.pathname]);
+    ReactGA.pageview("pageview", location.pathname);
+    console.log(location)
   console.log(location);
   }, [location])
 }
@@ -33,9 +34,9 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 const AppRouter = () => {
   usePageViews()
   return (
-        <Route render={({location}) => (
+        <Route render={() => (
           <AnimatePresence exitBeforeEnter initial={false}>
-            <Switch location={location}>
+            <Switch>
               <Route path="/contact" component={Contact} />
               <Route path="/education" component={Education} />
               <Route path="/stack" component={Stack} />
