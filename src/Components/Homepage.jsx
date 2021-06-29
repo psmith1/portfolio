@@ -3,12 +3,6 @@ import { ReactComponent as Shapes } from '../images/shapes.svg';
 import { motion } from 'framer-motion';
 import Social from './Social';
 import ReactTypingEffect from 'react-typing-effect';
-import ReactGA from 'react-ga';
-import RouteChangeTracker from './RouteChangeTracker';
-
-const trackingId = "G-WK39HEGN9M";
-ReactGA.initialize(trackingId);
-ReactGA.pageview('/homepage');
 
 // const variants = {
 //     hidden: { opacity: 0, y: 100 },
@@ -42,7 +36,6 @@ const Homepage = () => {
             <Social />
           </div>
         </div>
-      <RouteChangeTracker />
       </motion.section>
     )
 }

@@ -3,11 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ReactGA from 'react-ga';
-
-const trackingId = "G-WK39HEGN9M";
-ReactGA.initialize(trackingId);
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
   <React.StrictMode>

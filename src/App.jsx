@@ -3,8 +3,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  NavLink
-  // useLocation
+  NavLink,
+  useLocation
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Homepage from './Components/Homepage';
@@ -14,16 +14,24 @@ import Stack from './Components/Stack';
 import Contact from './Components/Contact'
 import { Icon } from '@iconify/react';
 import bxMenu from '@iconify-icons/bx/bx-menu';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
-import RouteChangeTracker from './Components/RouteChangeTracker';
+
+
+function usePageViews() {
+  let location = useLocation();
+  useEffect(() => {
+    ReactGA.send(["pageview", location.pathname]);
+  console.log(location);
+  }, [location])
+}
 
 const trackingId = "G-WK39HEGN9M";
 ReactGA.initialize(trackingId);
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const AppRouter = () => {
-  // let location = useLocation()
+  usePageViews()
   return (
         <Route render={({location}) => (
           <AnimatePresence exitBeforeEnter initial={false}>
@@ -33,7 +41,6 @@ const AppRouter = () => {
               <Route path="/stack" component={Stack} />
               <Route path="/projects" component={Projects}/>
               <Route path="/" component={Homepage} />
-              <RouteChangeTracker />
             </Switch>
           </AnimatePresence>
         )} />
