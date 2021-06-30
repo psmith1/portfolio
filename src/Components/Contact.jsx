@@ -2,6 +2,7 @@ import React from 'react';
 import Social from './Social';
 import {ReactComponent as Circle} from '../images/circle.svg';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 const variants = {
     hidden: { opacity: 0, y: 100 },
@@ -13,7 +14,10 @@ const sectionVariants = {
     exit: {opacity: 0}
 }
 
-const Contact = () => {
+const Contact = ({title, ...rest}) => {
+    useEffect(() => {
+      title = document.title;
+    });
     return (
     <motion.section
         className="contact"

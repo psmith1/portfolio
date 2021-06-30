@@ -23,7 +23,6 @@ function usePageViews() {
   useEffect(() => {
     ReactGA.pageview("pageview", location.pathname);
     console.log(location)
-  console.log(location);
   }, [location])
 }
 
@@ -34,9 +33,9 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 const AppRouter = () => {
   usePageViews()
   return (
-        <Route render={() => (
+        <Route render={({location}) => (
           <AnimatePresence exitBeforeEnter initial={false}>
-            <Switch>
+            <Switch location={location}>
               <Route path="/contact" component={Contact} />
               <Route path="/education" component={Education} />
               <Route path="/stack" component={Stack} />
