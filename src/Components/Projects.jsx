@@ -3,7 +3,6 @@ import projectData from '../data/projectdata';
 import { ReactComponent as Multiwave } from '../images/multiwave.svg';
 import ProjectLink from './ProjectLink';
 import { motion } from 'framer-motion';
-import { useEffect } from 'react';
 
 const sectionVariants = {
     initial: {opacity: 0},
@@ -11,10 +10,7 @@ const sectionVariants = {
     exit: {opacity: 0}
 }
 
-const Projects = ({title, ...rest}) => {
-    useEffect(() => {
-      title = document.title;
-    });
+const Projects = () => {
     return (
         <motion.section
             className="projects"

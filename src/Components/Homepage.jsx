@@ -3,7 +3,6 @@ import { ReactComponent as Shapes } from '../images/shapes.svg';
 import { motion } from 'framer-motion';
 import Social from './Social';
 import ReactTypingEffect from 'react-typing-effect';
-import { useEffect } from 'react';
 
 // const variants = {
 //     hidden: { opacity: 0, y: 100 },
@@ -15,10 +14,7 @@ const sectionVariants = {
     exit: {opacity: 0}
 }
 
-const Homepage = ({title, ...rest}) => {
-    useEffect(() => {
-      title = document.title;
-    });
+const Homepage = () => {
     return (
     <motion.section
         className="homepage"
