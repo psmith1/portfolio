@@ -228,6 +228,7 @@ body {
   margin-bottom: 60px;
   @media (max-width: 880px) {
     flex-direction: column-reverse;
+    max-height: 600px;
   }
 }
 .card-content {
