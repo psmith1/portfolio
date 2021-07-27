@@ -1,4 +1,10 @@
 const projectData = [
+            {
+        title: 'Street Medicine Kansas City - A Responsive Website Redesign Project',
+        img: 'smkcimg.png',
+        description: 'Street Medicine Kansas City is a nonprofit that provides medical, mental health, and social services to underserved and homeless populations in the Kansas City metropolitan area. The goal for this project was to design an updated web presence for Street Medicine Kansas City that reflects the scope and quality of their mission and ultimately –  increases community engagement with the organization.',
+        link: 'https://docs.google.com/presentation/d/1icRtdxnEhEZyOutuVBtu-8zpl9yetr58qM7-nb8Y8_w/edit?usp=sharing',
+    },
         {
         title: 'Gardenia - A UX/UI Case Study',
         img: 'Gardenia.png',
