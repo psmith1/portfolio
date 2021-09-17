@@ -1,4 +1,11 @@
 const projectData = [
+                {
+        title: 'Reveal - A UX/UI Case Study',
+        img: 'reveal.png',
+        description: 'My third UX/UI case study. Our goal was to create a reliable and credible mobile app to help users better understand the ingredients in pet products they are browsing, while skipping the inconvenience of filtering through endless internet search results.',
+        link: 'https://docs.google.com/presentation/d/1hSYKpYSdykg66O8pNynhjeYWYiQIU2ZE0Jrd7VqXN8M/edit?usp=sharing',
+        prototype: 'https://www.figma.com/proto/2ivFkjpLrMDzQgJRvyUozA/Reveal?node-id=267%3A7465&scaling=min-zoom&page-id=89%3A48&starting-point-node-id=267%3A7465'
+    },
             {
         title: 'Street Medicine Kansas City - A Responsive Website Redesign Project',
         img: 'smkcimg.png',
