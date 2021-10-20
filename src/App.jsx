@@ -16,6 +16,33 @@ import { Icon } from '@iconify/react';
 import bxMenu from '@iconify-icons/bx/bx-menu';
 import { useState, useEffect } from 'react';
 import ReactGA from 'react-ga4';
+import { useHistory } from 'react-router-dom'
+
+
+const [ locationKeys, setLocationKeys ] = useState([])
+const history = useHistory()
+
+useEffect(() => {
+  return history.listen(location => {
+    if (history.action === 'PUSH') {
+      setLocationKeys([ location.key ])
+    }
+
+    if (history.action === 'POP') {
+      if (locationKeys[1] === location.key) {
+        setLocationKeys(([ _, ...keys ]) => keys)
+
+        // Handle forward event
+
+      } else {
+        setLocationKeys((keys) => [ location.key, ...keys ])
+
+        // Handle back event
+
+      }
+    }
+  })
+}, [ locationKeys, ])
 
 
 function usePageViews() {
