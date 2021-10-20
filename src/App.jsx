@@ -4,7 +4,8 @@ import {
   Switch,
   Route,
   NavLink,
-  useLocation
+  useLocation,
+  useHistory
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Homepage from './Components/Homepage';
@@ -16,7 +17,6 @@ import { Icon } from '@iconify/react';
 import bxMenu from '@iconify-icons/bx/bx-menu';
 import { useState, useEffect } from 'react';
 import ReactGA from 'react-ga4';
-import { useHistory } from 'react-router-dom'
 
 
 function usePageViews() {
