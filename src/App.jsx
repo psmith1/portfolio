@@ -4,8 +4,7 @@ import {
   Switch,
   Route,
   NavLink,
-  useLocation,
-  useHistory
+  useLocation
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Homepage from './Components/Homepage';
@@ -17,7 +16,25 @@ import { Icon } from '@iconify/react';
 import bxMenu from '@iconify-icons/bx/bx-menu';
 import { useState, useEffect } from 'react';
 import ReactGA from 'react-ga4';
+import { browserHistory } from 'react-router';
 
+componentDidMount() {
+    super.componentDidMount();
+
+    this.onScrollNearBottom(this.scrollToLoad);
+
+    this.backListener = browserHistory.listen(location => {
+      if (location.action === "POP") {
+        // Do your stuff
+      }
+    });
+  }
+
+componentWillUnmount() {
+    super.componentWillUnmount();
+    // Unbind listener
+    this.backListener();
+}
 
 function usePageViews() {
   let location = useLocation();
@@ -50,26 +67,6 @@ const AppRouter = () => {
 
 function App() {
 
-const [ locationKeys, setLocationKeys ] = useState([])
-const history = useHistory()
-
-useEffect(() => {
-  return history.listen(location => {
-    if (history.action === 'PUSH') {
-      setLocationKeys([ location.key ])
-    }
-
-    if (history.action === 'POP') {
-      if (locationKeys[1] === location.key) {
-        setLocationKeys(([ _, ...keys ]) => keys)
-
-      } else {
-        setLocationKeys((keys) => [ location.key, ...keys ])
-
-      }
-    }
-  })
-}, [ locationKeys, ])
 const [openMenu, setOpenMenu] = useState(false);
 
   return (
